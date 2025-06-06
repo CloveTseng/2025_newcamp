@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: #fbfbfb;
+}
+html {
+  font-size: 16px;
+}
+
+@theme {
+  --color-primary: #0027d5;
+  --color-secondary: #6c757d;
+  --color-gray-500: #4b4b4b;
+
+  --text-custom-2xl: 28px;
+  --text-custom-5xl: 52px;
+  --text-custom-8xl: 120px;
+}
+@utility container {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@layer components {
+  .button-primary {
+    @apply font-medium text-gray-500 rounded-[40px] py-2 px-4 border;
+  }
+  .badge {
+    @apply font-bold text-white bg-primary rounded-[40px] py-1.5 px-3;
+  }
+  .text-7-bold {
+    @apply text-custom-2xl font-bold;
+  }
+
+  .font-overflow {
+    @apply overflow-hidden text-ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .placeholder-500::placeholder {
+    @apply font-medium text-gray-500;
+  }
+}
